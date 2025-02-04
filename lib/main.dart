@@ -1,20 +1,23 @@
 // Suggested code may be subject to a license. Learn more: ~LicenseLog:2569165363.
 // Suggested code may be subject to a license. Learn more: ~LicenseLog:3953645118.
 import 'package:flutter/material.dart';
-
+//testing
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'My App',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My App'),
+          title: const Text('My App'),
         ),
         body: UserCredentialsInputScreen(), // Updated to the new input screen
       ),
@@ -23,6 +26,8 @@ class MyApp extends StatelessWidget {
 }
 
 class UserCredentialsInputScreen extends StatefulWidget {
+  const UserCredentialsInputScreen({super.key});
+
   @override
   _UserCredentialsInputScreenState createState() =>
       _UserCredentialsInputScreenState();
@@ -43,7 +48,7 @@ class _UserCredentialsInputScreenState
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Enter your username',
             ),
@@ -54,9 +59,9 @@ class _UserCredentialsInputScreenState
               });
             },
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           TextField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               border: OutlineInputBorder(),
               labelText: 'Enter your password',
             ),
@@ -67,11 +72,6 @@ class _UserCredentialsInputScreenState
                 password = value; // Update the password variable
               });
             },
-          ),
-          SizedBox(height: 30),
-          Text(
-            'Username, Password: $username, $password', // Display username and password
-            style: TextStyle(fontSize: 18),
           ),
         ],
       ),

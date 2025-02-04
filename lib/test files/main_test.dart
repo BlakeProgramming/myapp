@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'file_two.dart'; // Import the next file
 
 void main() {
-  runApp(FileOneApp());
+  runApp(const FileOneApp());
 }
 
 class FileOneApp extends StatelessWidget {
@@ -11,7 +11,7 @@ class FileOneApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: FileOneScreen(),
     );
   }
@@ -30,7 +30,7 @@ class FileOneScreen extends StatelessWidget {
             // Navigate to file_two.dart
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => FileTwoScreen()),
+              MaterialPageRoute(builder: (context) => const FileTwoScreen()),
             );
           },
           child: const Text('Go to File Two'),
