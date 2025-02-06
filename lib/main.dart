@@ -1,7 +1,9 @@
 // Suggested code may be subject to a license. Learn more: ~LicenseLog:2569165363.
 // Suggested code may be subject to a license. Learn more: ~LicenseLog:3953645118.
 import 'package:flutter/material.dart';
-//testing
+
+//IN PROGRESS:
+//terminal flutterfire configure
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
